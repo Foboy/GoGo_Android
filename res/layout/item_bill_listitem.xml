@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dip"
+    android:orientation="vertical">
+	<TextView
+	    android:id="@+id/monthTextview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="本月"
+	    android:textSize="@dimen/bill_month_text_size"
+	    android:background="@color/DeepGray"
+	    android:textColor="@color/White"
+	    android:paddingLeft="10dip"
+	    android:visibility="gone" />
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dip" >
+
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:orientation="vertical"
+	         >
+	
+	        <TextView
+	            android:id="@+id/nameAndPhoneTextview"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="王晓（186*****704）"
+	            android:layout_marginTop="10dip"
+	            android:layout_marginBottom="10dip"
+	            android:textSize="@dimen/bill_name_text_size"
+	            android:textColor="@color/DeepGray" />
+	
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal">"
+			    <TextView
+			        android:id="@+id/dateTextview"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/FontGray"
+			        android:textSize="@dimen/bill_date_text_size"
+			        android:text="04-13 17:45"/>
+			    <TextView
+			        android:id="@+id/payMethodTextview"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/Yellow"
+					android:background="@color/Gray"
+					android:textSize="@dimen/success_tip_text_size"
+					android:layout_marginLeft="26dip"
+		            android:padding="2dip"
+			        android:text="GO币支付"/>
+		    </LinearLayout>
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/amountTextview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:gravity="center"
+	        android:textSize="@dimen/bill_amount_text_size"
+	        android:textColor="@color/Red"
+	        android:text="345GO币"/>
+	
+	</RelativeLayout>
+</LinearLayout>

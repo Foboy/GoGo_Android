@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+
+     >
+    <include layout="@layout/frame_main_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/frame_padding" >
+		<TableLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="20dip"
+		    android:background="@color/Gray" >
+		    <TableRow
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/White"
+		        android:layout_marginBottom="1dp" >
+		        <TextView
+        			android:layout_width="@dimen/paymethod_text_width"
+        			android:layout_height="@dimen/paymethod_label_height"
+					android:gravity="center_vertical"
+        			android:layout_gravity="right"
+        			android:textColor="@color/DeepGray"
+        			style="@style/paymethod_label_style"
+        			android:textSize="@dimen/paymethod_text_size"
+        			android:text="客户姓名："/>
+		        <TextView
+        			android:id="@+id/customernametv"
+        			android:layout_width="wrap_content"
+        			android:layout_height="@dimen/paymethod_label_height"
+        			android:gravity="center_vertical"
+        			android:layout_gravity="left"
+        			android:textColor="@color/Blue"
+        			style="@style/paymethod_label_style"
+        			android:textSize="@dimen/paymethod_text_size"
+        			android:text="张三"/>
+		    </TableRow>
+		    <TableRow
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/White"
+		        android:layout_marginBottom="1dp" >
+		        <TextView
+        			android:layout_width="@dimen/paymethod_text_width"
+        			android:layout_height="@dimen/paymethod_label_height"
+					android:gravity="center_vertical"
+        			android:layout_gravity="right"
+        			android:textColor="@color/DeepGray"
+        			style="@style/paymethod_label_style"
+        			android:textSize="@dimen/paymethod_text_size"
+        			android:text="GO币余额："/>
+		        <TextView
+        			android:id="@+id/gocointv"
+        			android:layout_width="wrap_content"
+        			android:layout_height="@dimen/paymethod_label_height"
+        			android:gravity="center_vertical"
+        			android:textColor="@color/Blue"
+        			android:layout_gravity="left"
+        			style="@style/paymethod_label_style"
+        			android:textSize="@dimen/paymethod_text_size"
+        			android:text="300"/>
+		    </TableRow>
+		    <TableRow
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/White"
+		        android:gravity="center_vertical"
+		        android:layout_marginBottom="1dp" >
+		        <TextView
+        			android:layout_width="@dimen/paymethod_text_width"
+        			android:layout_height="@dimen/paymethod_label_height"
+					android:gravity="center_vertical"
+        			android:layout_gravity="right"
+        			style="@style/paymethod_label_style"
+        			android:textColor="@color/DeepGray"
+        			android:textSize="@dimen/paymethod_text_size"
+        			android:text="总价："/>
+		        <TextView
+        			android:id="@+id/amounttv"
+        			android:layout_width="wrap_content"
+        			android:layout_height="@dimen/paymethod_label_height"
+        			android:gravity="center_vertical"
+        			android:textColor="@color/Blue"
+        			android:layout_gravity="left"
+        			style="@style/paymethod_label_style"
+        			android:textSize="@dimen/paymethod_text_size"
+        			android:text="200元"/>
+		    </TableRow>
+		</TableLayout>
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="40dip"
+	        android:layout_height="wrap_content">
+	
+	        <Button
+	            android:id="@+id/gogopaybtn"
+	            android:layout_width="150dp"
+	            android:layout_height="@dimen/common_button_height"
+	            android:background="@color/Blue"
+	            android:textColor="@color/White"
+	            android:layout_marginTop="40dp"
+	            android:layout_alignParentLeft="true"
+	            android:textSize="@dimen/frame_button_size"
+	            android:text="GO币支付" />
+	
+	        <Button
+	            android:id="@+id/lklpaybtn"
+	            android:layout_width="150dp"
+	            android:layout_height="@dimen/common_button_height"
+	            android:background="@color/Red"
+	            android:textColor="@color/White"
+	            android:layout_marginTop="40dp"
+	            android:textSize="@dimen/frame_button_size"
+	            android:layout_alignParentRight="true"
+	            android:text="拉卡拉支付" />
+	    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

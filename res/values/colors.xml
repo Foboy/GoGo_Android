@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="head_text">#FFFFFF</color>
+    <color name="page_background">#FFFFFF</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Red">#ff6666</color>
+	<color name="Blue">#009999</color>
+	<color name="Black">#000000</color>
+	<color name="FontGray">#cccccc</color>
+	<color name="Gray">#F5F5F5</color>
+	<color name="Yellow">#ff9966</color>
+	<color name="DeepGray">#999999</color>
+	<color name="LightBlack">#666666</color>
+	<color name="paymethodThTextColor">#999999</color>
+    <color name="tagBorderDefault">#000000</color>
+    <color name="tagBackgroundDefault">#ffffff</color>
+    <color name="tagSelectedColor">#ff6666</color>
+    <color name="tagTextColor">#999999</color>
+    <color name="listitem_transparent">#00000000</color>
+    <color name="listitem_black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

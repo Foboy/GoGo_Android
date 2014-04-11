@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical" >
+<!--  
+		    <com.foboy.gogo_android.widget.ProgressWheel
+		        android:id="@+id/progressBarFour"
+		        android:layout_width="130dp"
+		        android:layout_height="130dp"
+		        ProgressWheel:text=""
+		        ProgressWheel:textColor="@color/LightBlack"
+		        ProgressWheel:textSize="14sp"
+		        ProgressWheel:rimColor="@color/White"
+		        ProgressWheel:barLength="30dp" 
+		        ProgressWheel:barColor="@color/White"
+		        ProgressWheel:barWidth="4dp"
+		        ProgressWheel:rimWidth="2dp" 
+		        ProgressWheel:spinSpeed="8dp"
+		        ProgressWheel:delayMillis="40" />-->
+
+    <ProgressBar
+        android:id="@+id/dialogProgress"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+</LinearLayout>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:taglist="http://schemas.android.com/apk/res/com.foboy.gogo_android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:background="@color/White"
+    tools:context=".MainActivity" >
+	<include layout="@layout/frame_main_header" /> 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/frame_padding"
+        android:layout_marginTop="60dp"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/phoneet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_input_height"
+            android:ems="10"
+            android:background="@drawable/fb_edittext"
+            android:textSize="@dimen/input_text_size"
+            style="@style/main_input_style"
+			android:paddingLeft="@dimen/input_padding_left"
+			android:inputType="phone"
+			android:text="15882323654"
+            android:hint="手机号码" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/priceet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_input_height"
+            android:ems="10"
+            android:paddingLeft="@dimen/input_padding_left"
+            android:hint="金额"
+            android:text="234.87"
+            style="@style/main_input_style"
+            android:textSize="@dimen/input_text_size"
+            android:background="@drawable/fb_edittext"
+            android:layout_marginTop="20dp"
+            android:inputType="numberDecimal">"
+		</EditText>
+		<com.foboy.gogo_android.controls.TagListView
+			android:id="@+id/tagview"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="#fff"
+			android:padding="5dp"
+			android:layout_marginTop="30dp"
+			taglist:horizontal_spacing="12dp"
+			taglist:vertical_spacing="16dp"/>
+
+		<Button
+		    android:id="@+id/topay"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@color/Red"
+		    android:textColor="@color/White"
+		    android:layout_marginTop="40dp"
+		    android:textSize="@dimen/frame_button_size"
+		    android:height="@dimen/common_button_height"
+		    android:text="确  认" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical" >
+    <include layout="@layout/frame_main_header" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/frame_padding"
+        android:orientation="vertical" >
+    <EditText
+        android:id="@+id/validationcodeet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_input_height"
+        android:ems="10"
+        style="@style/main_input_style"
+        android:hint="请输入手机验证码"
+        android:paddingLeft="@dimen/input_padding_left"
+        android:textSize="@dimen/input_text_size"
+        android:background="@drawable/fb_edittext"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/payconfirmbtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+		android:background="@color/Red"
+		android:textColor="@color/White"
+		android:textSize="@dimen/frame_button_size"
+		android:layout_marginTop="60dp"
+        android:text="确认支付" />
+        
+    </LinearLayout>
+</LinearLayout>

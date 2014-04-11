@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_relativelayout_header" 
+  	android:layout_width="fill_parent" 
+  	android:layout_height="48dip"
+  	android:background="@color/Blue">
+  	
+    
+    <ImageButton
+        android:id="@+id/topbackbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+		android:background="@color/Blue"
+        android:src="@drawable/back" />
+    
+  	
+    <TextView 
+        android:id="@+id/frame_main_header_title"
+        style="@style/main_head_title"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="结账"
+		 />
+
+    <Button
+        android:id="@+id/billsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:background="@color/Blue"
+        android:textColor="@color/White"
+        android:visibility="gone"
+        android:textSize="@dimen/header_button_size"
+        android:text="账单" />
+    <Button
+        android:id="@+id/resendbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:background="@color/Blue"
+        android:textColor="@color/White"
+        android:textSize="@dimen/header_button_size"
+        android:visibility="gone"
+        android:text="重发" />
+
+</RelativeLayout>

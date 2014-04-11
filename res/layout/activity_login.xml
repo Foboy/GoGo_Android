@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/frame_padding"
+        android:orientation="vertical" >
+        
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/u10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/White"
+            android:text="@string/login_title" />
+        
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_input_height"
+        android:ems="10" 
+        android:paddingLeft="@dimen/input_padding_left"
+        android:textSize="@dimen/input_text_size"
+        android:layout_marginTop="30dp"
+        android:background="@color/White"
+        style="@style/main_input_style"
+        android:hint="请输入收银员账号">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_input_height"
+        android:ems="10"
+        android:paddingLeft="@dimen/input_padding_left"
+        android:hint="请输入密码"
+        style="@style/main_input_style"
+        android:textSize="@dimen/input_text_size"
+        android:background="@color/White"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+		android:background="@color/Red"
+		android:textColor="@color/White"
+		android:layout_marginTop="40dp"
+		android:textSize="@dimen/frame_button_size"
+        android:text="登  陆" />
+        
+    </LinearLayout>
+	
+</LinearLayout>
