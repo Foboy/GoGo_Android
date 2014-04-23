@@ -63,6 +63,7 @@
 	            android:textSize="32sp"
 	            android:textColor="@color/LightBlack"
 	            android:layout_alignParentLeft="true"
+	            android:visibility="gone"
 	            android:text="餐饮" />
 	        <TextView
 	            android:id="@+id/successamounttv"
@@ -71,7 +72,7 @@
 	            android:gravity="center"
 	            android:textSize="30sp"
 	            android:textColor="@color/Red"
-	            android:layout_alignParentRight="true"
+	            android:layout_centerInParent="true"
 	            android:text="345.00元" />
 	    </RelativeLayout>
 	    <RelativeLayout

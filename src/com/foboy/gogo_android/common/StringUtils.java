@@ -1,10 +1,13 @@
 package com.foboy.gogo_android.common;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Pattern;
+
+import android.text.Html;
 
 /** 
  * 字符串操作工具包
@@ -21,6 +24,8 @@ public class StringUtils
 	private final static SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	private final static SimpleDateFormat dateFormater3 = new SimpleDateFormat("MM-dd HH:mm");
 	private final static SimpleDateFormat dateFormater2 = new SimpleDateFormat("yyyy-MM-dd");
+	
+	private final static DecimalFormat decimalFormat=new DecimalFormat(".00");
 	
 	/**
 	 * 将字符串转位日期类型
@@ -255,5 +260,13 @@ public class StringUtils
 			return Boolean.parseBoolean(b);
 		}catch(Exception e){}
 		return false;
+	}
+	
+	public static String toDecimal(float amount)
+	{
+		try{
+			return decimalFormat.format(amount);
+		}catch(Exception e){}
+		return "0.00";
 	}
 }

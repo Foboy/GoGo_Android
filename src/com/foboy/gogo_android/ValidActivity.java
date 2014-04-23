@@ -60,10 +60,12 @@ public class ValidActivity extends Activity {
 				
 		        String urlString = UrlUtils.SendValidateCode;
 		        RequestParams params = new RequestParams(); // 绑定参数
+		        params.put("phone", GlobalConfig.getInstance().getCustomPhone());
 		        params.put("customer_id", GlobalConfig.getInstance().getCusomerId()+"");
 		        HttpUtils.post(urlString, params, new BaseJsonHttpResponseHandler<EntityModel>() {
 		            @Override
 		            public void onSuccess(int statusCode, Header[] headers, String rawJsonResponse, EntityModel response) {
+		            		
 		            		if(response.isSuccess())
 		            		{
 		            			Toast.makeText(ValidActivity.this,  "重发成功", Toast.LENGTH_SHORT).show();
@@ -76,8 +78,8 @@ public class ValidActivity extends Activity {
 
 		            @Override
 		            public void onFailure(int statusCode, Header[] headers, Throwable throwable, String rawJsonData, EntityModel errorResponse) {
-
-		            		Toast.makeText(ValidActivity.this, throwable.getMessage(), Toast.LENGTH_LONG).show();
+		            	
+		            	Toast.makeText(ValidActivity.this, throwable.getMessage(), Toast.LENGTH_LONG).show();
 		            }
 
 		            @Override
@@ -123,7 +125,7 @@ public class ValidActivity extends Activity {
     {
 		if(!isInputPassed())
 			return;
-		
+		lmv.show("订单处理");
         String urlString = UrlUtils.GoPayValid;
         RequestParams params = new RequestParams(); // 绑定参数
         params.put("customer_id", GlobalConfig.getInstance().getCusomerId()+"");
@@ -142,6 +144,7 @@ public class ValidActivity extends Activity {
         	
             @Override
             public void onSuccess(int statusCode, Header[] headers, String rawJsonResponse, GoInfoModel response) {
+            	lmv.hide();
             		if(response.isLogin() && response.isSuccess())
             		{
 
@@ -152,14 +155,12 @@ public class ValidActivity extends Activity {
             		{
             			Toast.makeText(ValidActivity.this,  response.getErrorMessage(), Toast.LENGTH_LONG).show();
             		}
-            		lmv.hide();
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, String rawJsonData, GoInfoModel errorResponse) {
-
-            		Toast.makeText(ValidActivity.this, throwable.getMessage(), Toast.LENGTH_LONG).show();
-            		lmv.hide();
+            	lmv.hide();
+            	Toast.makeText(ValidActivity.this, throwable.getMessage(), Toast.LENGTH_LONG).show();
             }
 
             @Override

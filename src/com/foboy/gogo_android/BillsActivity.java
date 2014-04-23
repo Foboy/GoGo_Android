@@ -2,9 +2,11 @@ package com.foboy.gogo_android;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.foboy.gogo_android.R;
 import com.foboy.gogo_android.adapter.ListViewBillAdapter;
 import com.foboy.gogo_android.common.HttpUtils;
+import com.foboy.gogo_android.common.IgnoreCaseNamingStrategy;
 import com.foboy.gogo_android.common.StringUtils;
 import com.foboy.gogo_android.common.UrlUtils;
 import com.foboy.gogo_android.models.BillListModel;
@@ -291,7 +293,9 @@ public class BillsActivity extends Activity {
 
             @Override
             protected BillListModel parseResponse(String rawJsonData) throws Throwable {
-                return new ObjectMapper().readValues(new JsonFactory().createParser(rawJsonData), BillListModel.class).next();
+            	ObjectMapper om = new ObjectMapper();
+            	//om.setPropertyNamingStrategy(new IgnoreCaseNamingStrategy());
+                return om.readValues(new JsonFactory().createParser(rawJsonData), BillListModel.class).next();
             }
 
         });

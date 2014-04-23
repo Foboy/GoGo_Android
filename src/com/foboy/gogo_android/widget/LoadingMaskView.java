@@ -11,6 +11,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.foboy.gogo_android.R;
 import com.foboy.gogo_android.common.HttpUtils;
@@ -19,6 +20,7 @@ import com.foboy.gogo_android.widget.ProgressWheel;
 public class LoadingMaskView {
 	private Dialog dialog;
 	private ProgressBar progress;
+	private TextView loadLabel;
 	private boolean running = false;
 	
 	public LoadingMaskView(Activity mActivity) {
@@ -27,6 +29,7 @@ public class LoadingMaskView {
 		LinearLayout popView = (LinearLayout) LayoutInflater.
 				from(mActivity).inflate(R.layout.frame_loading_mask, null);
 		progress = (ProgressBar) popView.findViewById(R.id.dialogProgress);
+		loadLabel = (TextView) popView.findViewById(R.id.loading_label); 
 		try
 		{
 			progress.wait();
@@ -52,6 +55,11 @@ public class LoadingMaskView {
 	public void show() {
 		this.running = true;
 		dialog.show();
+	}
+	
+	public void show(String msg) {
+		this.loadLabel.setText(msg);
+		this.show();
 	}
 	
 	public void hide() {

@@ -17,6 +17,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -75,7 +76,7 @@ public class MainActivity extends Activity implements TagListener{
 				
 				if(!isInputPassed())
 					return;
-				
+				lmv.show("正在查询");
 		        String urlString = UrlUtils.GetGoInfo;
 		        RequestParams params = new RequestParams(); // 绑定参数
 		        params.put("phone", phone.getText().toString());
@@ -163,13 +164,13 @@ public class MainActivity extends Activity implements TagListener{
 			return false;
 		}
 		if(!StringUtils.isNumber(amt)){
-			Toast.makeText(MainActivity.this, "请输入正确的消费金额" +amt, Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this, "请输入正确的消费金额", Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		List<Integer> catalogids = this.tagListView.selectedTagIds();
 		if(catalogids.size() == 0)
 		{
-			Toast.makeText(MainActivity.this, "请至少选择一种消费类型" +amt, Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this, "请至少选择一种消费类型", Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		GlobalConfig.getInstance().setCatalogIds(catalogids);
@@ -205,7 +206,19 @@ public class MainActivity extends Activity implements TagListener{
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        
         return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	super.onOptionsItemSelected(item);
+    	if( item.getItemId() == R.id.action_logout)
+    	{
+    		GlobalConfig.getInstance().setLogin(false);
+    		this.toLogin();
+    	}
+    	return true;
     }
     
 	@Override

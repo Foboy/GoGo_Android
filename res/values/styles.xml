@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -22,7 +22,8 @@
     </style>
     
     <style name="paymethod_label_style">
-
+		<item name="android:paddingLeft">15dip</item>
+		<item name="android:paddingRight">15dip</item>
     </style>
     
    	<style name="main_head_title">

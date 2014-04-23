@@ -1,7 +1,8 @@
 package com.foboy.gogo_android.common;
 
 public class UrlUtils {
-	private final static String base = "http://192.168.1.3/index.php?url=";
+	//:8080/GoGoTown/trunk/crm
+	private final static String base = "http://192.168.0.62:81/crm/index.php?url=";
 	public final static String Login = base+"user/applogin";
 	public final static String GetCatalogs = base+"cash/getcatalogs";
 	public final static String GetGoInfo = base+"cash/getgoinfo";

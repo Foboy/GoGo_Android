@@ -61,7 +61,7 @@ public class LoginActivity extends Activity {
 				// TODO Auto-generated method stub
 				if(!LoginActivity.this.isInputPassed())
 					return;
-				lmv.show();
+				lmv.show("正在登陆");
 				
 		        String urlString = UrlUtils.Login;
 		        RequestParams params = new RequestParams(); // 绑定参数
@@ -86,20 +86,20 @@ public class LoginActivity extends Activity {
 		            				Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
 		            				GlobalConfig.getInstance().setCatalogs(response.getData());
 		            			}
-		            			
+		            			LoginActivity.this.finish();
 		            		}
 		            		else
 		            		{
 		            			Toast.makeText(LoginActivity.this,  response.getErrorMessage(), Toast.LENGTH_LONG).show();
 		            		}
 		            		lmv.hide();
-		            		LoginActivity.this.finish();
+
 		            }
 
 		            @Override
 		            public void onFailure(int statusCode, Header[] headers, Throwable throwable, String rawJsonData, CatalogsModel errorResponse) {
 
-		            		Toast.makeText(LoginActivity.this, throwable.getMessage(), Toast.LENGTH_LONG).show();
+		            		Toast.makeText(LoginActivity.this, "网络异常，请检查是否连接到网络", Toast.LENGTH_LONG).show();
 		            		lmv.hide();
 		            }
 

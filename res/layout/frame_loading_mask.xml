@@ -21,10 +21,29 @@
 		        ProgressWheel:spinSpeed="8dp"
 		        ProgressWheel:delayMillis="40" />-->
 
-    <ProgressBar
-        android:id="@+id/dialogProgress"
-        android:layout_gravity="center"
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_fill_box"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">"
+	    <ProgressBar
+	        android:id="@+id/dialogProgress"
+	        android:layout_gravity="center"
+	        android:layout_width="20dp"
+	        android:layout_height="20dp" />
+	    <TextView
+            android:id="@+id/loading_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/White"
+            android:text="" />
+    </LinearLayout>
     
 </LinearLayout>

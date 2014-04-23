@@ -31,6 +31,18 @@ public class BillModel {
 	public String getPhone() {
 		if(phone == null)
 			return "нч";
+		if(phone.length()!=0)
+		{
+			char[] arr = phone.toCharArray();
+			for(int i=0;i<arr.length;i++)
+			{
+				if(i>= 3 && i<arr.length - 3)
+				{
+					arr[i] = '*';
+				}
+			}
+			return new StringBuilder().append(arr).toString(); 
+		}
 		return phone;
 	}
 	@JsonProperty("mobile")
